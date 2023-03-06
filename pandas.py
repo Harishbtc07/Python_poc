@@ -97,3 +97,4 @@ print(pd.isna(df2['one']))
 print(df2['one'].notna())
 
 print(df2.fillna('Missing'))
+

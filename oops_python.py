@@ -21,10 +21,10 @@ class Animal:
         self.name = name
         
     def eat(self):
-        print(f"{self.name} is eating.")
+        print(f"{self.name} is eating")
         
     def sleep(self):
-        print(f"{self.name} is sleeping.")
+        print(f"{self.name} is sleeping")
 
 # Subclass of Animal
 class Cat(Animal):
@@ -32,7 +32,7 @@ class Cat(Animal):
         super().__init__(name)
         
     def meow(self):
-        print(f"{self.name} is meowing.")
+        print(f"{self.name} is meowing")
         
 # Subclass of Animal
 class Dog(Animal):
@@ -40,7 +40,7 @@ class Dog(Animal):
         super().__init__(name)
         
     def bark(self):
-        print(f"{self.name} is barking.")
+        print(f"{self.name} is barking")
 
 # Create an instance of the Animal class
 animal = Animal("Generic Animal")

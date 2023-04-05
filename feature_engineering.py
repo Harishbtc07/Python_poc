@@ -89,3 +89,18 @@ for feature in  categorical_features:
     dataset[feature]=np.where(dataset[feature].isin(temp_df),dataset[feature],'Rare_var')
 
 print(dataset.head()) 
+
+
+#Feature Scalling
+feature_scale=[feature for feature in dataset.columns if feature not in ['Id','SalePrice']]
+
+from sklearn.preprocessing import MinMaxScaler
+scaler=MinMaxScaler()
+scaler.fit(dataset[feature_scale])
+
+# transform the dataset, and add on the Id and SalePrice variables
+data = pd.concat([dataset[['Id', 'SalePrice']].reset_index(drop=True),
+                    pd.DataFrame(scaler.transform(dataset[feature_scale]), columns=feature_scale)],
+                    axis=1)
+
+print(data.head())  

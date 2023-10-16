@@ -48,4 +48,3 @@ if __name__ == "__main__":
     config = load_config("config.json")
     if config:
         create_healthcare_dataset(config["project_id"], config["location"], config["dataset_id"], config["key_path"])
-## Creating dataset
